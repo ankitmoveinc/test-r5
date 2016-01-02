@@ -114,6 +114,9 @@ GEM
     net-ssh (3.0.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    passenger (5.0.22)
+      rack
+      rake (>= 0.8.1)
     puma (2.15.3)
     rack (2.0.0.alpha)
       json
@@ -187,6 +190,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  passenger
   puma
   rails (>= 5.0.0.beta1, < 5.1)
   spring
