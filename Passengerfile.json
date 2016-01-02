@@ -1,0 +1,9 @@
+{
+  "port": 80,
+  "environment": "production",
+  "ruby": "2.3.0"
+  "log_file": "tmp/passenger.log",
+  "max_pool_size": 15,
+  "pool_idle_time": 10
+  "min_instances": 3
+}
