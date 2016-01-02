@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'seller_leads'
-set :repo_url, 'https://github.com/ankit8898/test-r5.git'
+set :repo_url, 'git@github.com:ankitmoveinc/test-r5.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
