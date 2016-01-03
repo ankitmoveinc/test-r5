@@ -1,5 +1,6 @@
 {
   "port": 3050,
   "environment": "production",
+  "daemonize": true,
   "log_file": "tmp/passenger.log"
 }

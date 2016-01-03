@@ -67,5 +67,5 @@ namespace :deploy do
   end
 
   #after :published, :run_bundle_install
-  after :finished, :'passenger:restart' #:hard_reset, :clear_cache
+  #after :finished, :'passenger:restart' #:hard_reset, :clear_cache
 end
