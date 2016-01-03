@@ -1,0 +1,19 @@
+// Replaces Bootstrap's default variable file
+@import "rdc-bootstrap/rdc-variables";
+
+// Roboto Google Font (not hosted)
+@import "web-fonts/roboto-google-font";
+
+// Bootstrap Framework (trimmed down to only components needed)
+@import "bootstrap";
+
+// Core RDC Boostrap Framework
+@import "rdc-bootstrap";
+
+// Global Navigation Components included in app.css until migrated to a standalone application
+// Global Header & Footer Styles (non-framework)
+@import "global-nav/svg-sprites";
+@import "global-nav/navigation-header";
+@import "global-nav/navigation-footer";
+@import "global-nav/navigation-modal"; // Pending removal
+

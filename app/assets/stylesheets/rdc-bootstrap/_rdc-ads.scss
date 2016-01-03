@@ -1,0 +1,102 @@
+//=====================================//
+//====== RDC General Ad helpers =======//
+//=====================================//
+// Ads with outline on them
+.ad-outline {
+  iframe {
+    border: 1px solid $gray-light !important;
+  }
+}
+// Ads that should be centered (all type)
+.ad-center {
+  margin: 15px auto;
+  text-align: center;
+}
+// Ads that should be centered with BG (all type)
+.ad-center-bg {
+  @extend .ad-center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+// MREC - Min height to prevent page from jerking
+// ONLY USE ABOVE FOLD (Not on responsive ads)
+.ad-mrec-af {
+  min-height: 250px;
+}
+
+// Leaderboard - Min height to prevent page from jerking
+// ONLY USE ABOVE FOLD (Not on responsive ads)
+.ad-lb-af {
+  min-height: 90px;
+}
+
+// Ad that should span the entire page container, centered if it doesn't
+.ad-marginless {
+  margin-left: -10px;
+  margin-right: -10px;
+  text-align: center;
+}
+
+// Ad that should span the entire modal body, centered if it doesn't
+.ad-marginless-modal {
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+}
+
+
+//===============================//
+//====== SPECIAL CASE ADS =======//
+//===============================//
+// Special Case - LDP text ad
+.ad-text-dart {
+  min-height: 17px; //prevents page from jerking
+  .dart-link {
+    color: $link-color;
+  }
+}
+// Special Case - SRP inline ads
+.ad-srp-inline {
+  overflow-x: hidden;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #eee;
+  vertical-align: top;
+}
+
+// Special Case - LDP right rail sticky ad that has width of 300px or lesser
+.ad-sticky-rightrail { max-width: 300px; }
+
+//====================================//
+//====== MEDIA QUERIES FOR ADS =======//
+//====================================//
+// Ads at Medium only
+@media only screen and (min-width: 767px) and (max-width: 1279px) {
+  // For creating light gray background on 312px  sidebars
+  .ad-sidebar-bg {
+    padding: 5px 0;
+    background-color: rgba(0,0,0,0.05);
+  }
+}
+// Ads at xxs to small
+@media only screen and (max-width : 996px) {
+  // CSS back up to hide ad for xs to sm
+  .ad-desktop {
+    display: none;
+  }
+  // Map view srp inline ad mod
+  body.srp-map-view .ad-srp-inline {
+    display: inline-block !important;
+    margin: 5px 10px 0 0;
+    height: 110px;
+    max-width: 430px;
+  }
+}
+// Ads at xxs to xs
+@media only screen and (max-width : 767px) {
+  //hiding leaderboard for xs and xxs sizes
+  [class*="ad-lb-"]  {
+    display: none;
+  }
+}

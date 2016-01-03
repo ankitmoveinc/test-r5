@@ -1,0 +1,174 @@
+//## Cards
+.business-card {
+  @include box-shadow(0px 1px 3px 0px rgba(0,0,0,0.25));
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #fff;
+  overflow: hidden;
+  .business-card-media {
+    width: 140px;
+    float: left;
+    padding-top: 13px;
+  }
+  .business-card-img {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .business-card-img img {
+    vertical-align: middle;
+    display: table-cell;
+    max-width: 120px;
+    max-height: 80px;
+  }
+  .business-card-content {
+    padding: 15px 10px;
+    word-wrap: break-word;
+     > ul { padding-left: 0; }
+  }
+  .business-card-media + .business-card-content {
+    margin-left: 140px;
+    padding: 10px;
+  }
+
+  /*Agent Business card agent*/
+  &.business-card-agent .business-card-content {
+    min-height: 140px;
+  }
+  &.business-card-agent .business-card-media img {
+    max-width: 80px;
+    max-height: 120px;
+  }
+  /*Agent Business card + Broker Business card */
+  & +.business-card {
+    margin-top: 15px;
+  }
+}
+
+//## Agent Card
+.agent-card {
+  display: table;
+  width: 100%;
+  &> div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  //## Agent card checkbox
+  .agent-card-checkbox { width: 20px; }
+
+  //## Agent card checkbox
+  .agent-card-img {
+    width: 60px;
+    div {
+      @include square(60px);
+      overflow: hidden;
+      cursor: pointer;
+      img { width: 60px; }
+    }
+  }
+
+  //## Agent card ratings
+  .agent-card-ratings {
+    span { vertical-align: top; }
+    .icon-agent-rating + span {
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+
+  //## Agent popover (Mini profile)
+  .agent-card-popover {
+    width: 300px;
+    padding: 0;
+    top: 0;
+    left: -5px;
+
+    .popover-content { padding: 0; }
+
+    //## Close buton
+    .popover-close {
+      position: absolute;
+      top: 2px;
+      right: 6px;
+      background-color: transparent;
+      border: 0 none;
+      padding: 0;
+      color: #fff;
+    }
+
+    //## Agent popover Header
+    .agent-card-popover-header {
+      display: table;
+      width: 100%;
+      color: #fff;
+      background-image: url(asset_path('citylights_cover_sm.jpg'));
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &> div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .agent-card-img {
+        width: 102px;
+        &> div {
+          position: relative;
+          @include square(80px);
+          top: 30px;
+          left: 10px;
+          border: 2px solid #fff;
+          img { width: 80px; }
+        }
+      }
+      ul {
+        padding: 14px 5px 8px 0;
+        > li { line-height: 1.4; }
+        .agent-card-ratings { margin-top: 2px; }
+      }
+      .agent-name {
+        color: #fff;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-large;
+        position: relative;
+        width: 180px;
+        .label {
+          position: absolute;
+          margin-top: 6px;
+          margin-left: 6px;
+          background-color: $gray;
+        }
+      }
+      .agent-card-ratings {
+        .icon-agent-rating + span {
+          margin-top: -1px;
+        }
+      }
+    }
+    //## Agent popover Listing Data
+    .agent-card-popover-listing-data {
+      padding: 12px 2px 15px 83px;
+    }
+  }
+}
+
+//Inculde responsive styles per media queries
+//================================================//
+//======== Larger than Min Large only (lg+)========//
+//================================================//
+@media only screen and (min-width : 1280px) {
+  .agent-card {
+    .agent-card-popover { left: -10px; }
+  }
+}
+
+//=======================================//
+//==== Zero to Max X-Small (xxs, xs)=====//
+// excludes: ipad portriat
+//=======================================//
+@media only screen and (max-width : 766px) {
+  .agent-card {
+    .agent-card-popover { left: -20px; }
+  }
+}

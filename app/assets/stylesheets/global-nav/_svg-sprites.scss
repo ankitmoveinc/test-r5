@@ -1,0 +1,243 @@
+// Header and footer svg sprite
+
+// Path variables for sprites
+// Navigation header SVG sprite - Realtor logo, popover down arrow, mobile toggle menu, user icon
+$svg-header-path: url(asset-path("sprite-header.svg"));
+
+// Network Menu popover SVG sprite - All patner sites logos - Lazy loaded
+$svg-network-logos-path: url(asset-path("sprite-network-logos.svg"));
+
+// Mobile icons SVG sprite - Lazy loaded
+$svg-menu-icons-path: url(asset-path("sprite-menu-icons.svg"));
+
+// Navigation footer SVG sprite - Social icons, Realtor univeristy logo, Homelogic logo
+$svg-footer-path: url(asset-path("sprite-footer.svg"));
+
+.svg-icon, .svg-logo {display: inline-block;}
+
+//=========================================================//
+//== SVG CRITICAL LOGO + ICONS (TOP BAR) - COPY AND PASTE FROM GRUNT GENERATED CSS ==//
+//=========================================================//
+.svg-logo-realtor {
+	background: $svg-header-path 0 0 no-repeat;
+	width: 156px;
+	height: 28.6px;
+}
+.svg-icon-down-arrow-circle {
+	background: $svg-header-path 0 42.028985507246375% no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.svg-icon-mobile-menu-toggle {
+	background: $svg-header-path 0 69.23076923076923% no-repeat;
+	width: 12px;
+	height: 20px;
+}
+.svg-icon-user {
+	background: $svg-header-path 0 100% no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
+//=========================================================//
+//== SVG POPOVER MENU LOGOS (LAZY LOADED) - COPY AND PASTE FROM GRUNT GENERATED CSS ==//
+//=========================================================//
+.svg-popover-logos {
+  background-image: $svg-network-logos-path;
+}
+.svg-logo-commercial {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+	width: 162px;
+	height: 40px;
+}
+.svg-logo-doorsteps {
+  background-position: 0 25%;
+  background-repeat: no-repeat;
+	width: 162px;
+	height: 40px;
+}
+.svg-logo-moving {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+	width: 162px;
+	height: 40px;
+}
+.svg-logo-international {
+	background-position: 0 75%;
+  background-repeat: no-repeat;
+	width: 162px;
+	height: 40px;
+}
+.svg-logo-seniorhousing {
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+	width: 162px;
+	height: 40px;
+}
+
+//=========================================================//
+//== MENU SVG ICONS - COPY AND PASTE FROM GRUNT GENERATED CSS ==//
+//=========================================================//
+.svg-menu-icons {
+  background-image: $svg-menu-icons-path;
+}
+.svg-icon-advice {
+	background-repeat: no-repeat;
+	background-position:0 0;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-angle-down {
+	background-repeat: no-repeat;
+	background-position:0 4.895104895104895%;
+	width: 16px;
+	height: 16px;
+}
+
+.svg-icon-app-doorsteps {
+	background-repeat: no-repeat;
+	background-position:0 8.178438661710038%;
+	width: 50px;
+	height: 50px;
+}
+
+.svg-icon-app-mobile {
+	background-repeat: no-repeat;
+	background-position:0 17.472118959107807%;
+	width: 50px;
+	height: 50px;
+}
+
+.svg-icon-app-mortgage {
+	background-repeat: no-repeat;
+	background-position:0 26.765799256505577%;
+	width: 50px;
+	height: 50px;
+}
+
+.svg-icon-app-realtor {
+	background-repeat: no-repeat;
+	background-position:0 36.059479553903344%;
+	width: 50px;
+	height: 50px;
+}
+
+.svg-icon-app-rentals {
+	background-repeat: no-repeat;
+	background-position:0 45.353159851301115%;
+	width: 50px;
+	height: 50px;
+}
+
+.svg-icon-apt-for-rent {
+	background-repeat: no-repeat;
+	background-position:0 52.5%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-external {
+	background-repeat: no-repeat;
+	background-position:0 55.90277777777778%;
+	width: 12px;
+	height: 12px;
+}
+
+.svg-icon-home-for-sale {
+	background-repeat: no-repeat;
+	background-position:0 59.642857142857146%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-home-values {
+	background-repeat: no-repeat;
+	background-position:0 64.64285714285714%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-local-info {
+	background-repeat: no-repeat;
+	background-position:0 69.64285714285714%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-mortgage {
+	background-repeat: no-repeat;
+	background-position:0 74.64285714285714%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-mortgage-calculator {
+	background-repeat: no-repeat;
+	background-position:0 79.64285714285714%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-news {
+	background-repeat: no-repeat;
+	background-position:0 84.64285714285714%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-recent-search {
+	background-repeat: no-repeat;
+	background-position:0 90.94202898550725%;
+	width: 36px;
+	height: 36px;
+}
+
+.svg-icon-trending {
+	background-repeat: no-repeat;
+	background-position:0 96.07142857142857%;
+	width: 28px;
+	height: 28px;
+}
+
+.svg-icon-video {
+	background-repeat: no-repeat;
+	background-position:0 100%;
+	width: 26px;
+	height: 22px;
+}
+
+//=========================================================//
+//== SVG FOOTER ICONS - COPY AND PASTE FROM GRUNT GENERATED CSS ==//
+//=========================================================//
+.svg-icon-facebook {
+	background: $svg-footer-path 0 0 no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.svg-icon-google-plus {
+	background: $svg-footer-path 0 18.181818181818183% no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.svg-icon-pinterest {
+	background: $svg-footer-path 0 36.36363636363637% no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.svg-icon-twitter {
+	background: $svg-footer-path 0 54.54545454545455% no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.svg-logo-houselogic {
+	background: $svg-footer-path 0 76.19047619047619% no-repeat;
+	width: 100px;
+	height: 30px;
+}
+.svg-logo-realtoru {
+	background: $svg-footer-path 0 100% no-repeat;
+	width: 100px;
+	height: 30px;
+}

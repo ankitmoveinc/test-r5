@@ -1,0 +1,98 @@
+//== Overwriting Bootstrap default modal
+.modal-content {
+  border: none;
+  border-radius: 0;
+  .close {
+    color: $text-color;
+    text-shadow: none;
+    opacity: 1;
+    filter: none;
+  }
+}
+.modal-header {
+  padding: $modal-title-padding;
+  border-bottom: 0;
+  background-color: $gray-tint;
+}
+.modal-title {
+  font-weight: $font-weight-normal;
+}
+.modal-backdrop {
+  height: 100%;
+}
+
+//== Fix for page scrolling issue + background covering when modals are open
+.modal-backdrop {
+  z-index: 1039;
+  position: fixed;
+  bottom: 0;
+}
+
+//== Custom modal styling
+//## Highlight content inside modal body content
+.modal-body{
+  .modal-content-highlight {
+    background: $bg-default;
+    padding: 10px;
+  }
+}
+//## Modal actions (buttons)
+.modal-actions {
+  margin: 20px 0 20px;
+}
+
+//## Fix chrome error on modals (background-clip)
+.modal-content {
+  background-clip: border-box;
+}
+
+//=====================================================//
+//======== Larger than Min Small only (md/lg+)========//
+//=====================================================//
+@media only screen and (min-width : 767px) {
+  .modal-lg {
+    width: $modal-lg;
+  }
+}
+
+//## Mobile fullscreen modal - Zero to Max X-Small (xxs, xs)
+// note: modals that become full screen at smaller sizes
+@media only screen and (max-width : 766px) {
+  .modal-mobile-fullscreen {
+    .modal-dialog, .modal-content {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+    }
+    .modal-header {
+      text-align: center;
+      .close {
+        position: absolute;
+        top:0;
+        left: 0;
+        span {
+          padding: 13px 8px;
+          height: 100%;
+          display: block;
+          font-size: 28px;
+        }
+      }
+      .modal-title {
+        font-size: $font-size-large;
+      }
+    }
+    .modal-body{
+      .modal-content-highlight {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+    .modal-actions {
+      .btn {
+        display: block;
+        min-width: 290px;
+        margin: 5px auto;
+      }
+    }
+  }
+}

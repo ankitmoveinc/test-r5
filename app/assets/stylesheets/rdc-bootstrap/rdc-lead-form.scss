@@ -1,0 +1,24 @@
+// RDC Lead form styles
+
+.lead-form {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .lead-form-title, .lead-form-toll-free {
+    font-weight: $font-weight-semibold;
+    margin-bottom: 20px;
+    span {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base;
+    }
+  }
+  .lead-form-toll-free + .lead-form-title  {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+    margin-top: -10px;
+  }
+  .lead-form-policy {
+    font-size: 10px;
+    text-align: left;
+    padding: 10px 0;
+  }
+}

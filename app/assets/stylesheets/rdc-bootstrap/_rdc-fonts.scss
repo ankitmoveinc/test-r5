@@ -1,0 +1,135 @@
+// RDC Custom Font icons (inculde Font Awesome icons as well)
+@font-face {
+  font-family: "rdcfont";
+  src:font-url("rdcfont.eot");
+  src:font-url("rdcfont.eot?#iefix") format("embedded-opentype"),
+      font-url("rdcfont.woff") format("woff"),
+      font-url("rdcfont.ttf") format("truetype"),
+      font-url("rdcfont.svg#rdcfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.#{$ra-css-prefix} {
+  display: inline-block;
+  font: normal normal normal 14px/1 rdcfont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+.#{$ra-css-prefix}-bed:before { content: "\e000"; }
+.#{$ra-css-prefix}-bath:before { content: "\e001"; }
+.#{$ra-css-prefix}-size:before { content: "\e002"; }
+.#{$ra-css-prefix}-lot-size:before { content: "\e003"; }
+.#{$ra-css-prefix}-filters:before { content: "\e004"; }
+.#{$ra-css-prefix}-block-r:before { content: "\e005"; }
+.#{$ra-css-prefix}-arrow-down:before { content: "\e006"; }
+.#{$ra-css-prefix}-phone:before { content: "\e007"; }
+.#{$ra-css-prefix}-print:before { content: "\e008"; }
+.#{$ra-css-prefix}-share-square:before { content: "\e009"; }
+.#{$ra-css-prefix}-heart:before { content: "\e00a"; }
+.#{$ra-css-prefix}-heart-o:before { content: "\e00b"; }
+.#{$ra-css-prefix}-calendar-o:before { content: "\e00c"; }
+.#{$ra-css-prefix}-calendar:before { content: "\e00d"; }
+.#{$ra-css-prefix}-chevron-left:before { content: "\e00e"; }
+.#{$ra-css-prefix}-chevron-right:before { content: "\e00f"; }
+.#{$ra-css-prefix}-external-link:before { content: "\e010"; }
+.#{$ra-css-prefix}-mobile:before { content: "\e011"; }
+.#{$ra-css-prefix}-comment:before { content: "\e012"; }
+.#{$ra-css-prefix}-home:before { content: "\e013"; }
+.#{$ra-css-prefix}-filmstrip:before { content: "\e014"; }
+.#{$ra-css-prefix}-video-camera:before { content: "\e015"; }
+.#{$ra-css-prefix}-map-marker:before { content: "\e016"; }
+.#{$ra-css-prefix}-search:before { content: "\e017"; }
+.#{$ra-css-prefix}-resize-expand:before { content: "\e018"; }
+.#{$ra-css-prefix}-tag:before { content: "\e019"; }
+.#{$ra-css-prefix}-leaf:before { content: "\e01a"; }
+.#{$ra-css-prefix}-info-circle:before { content: "\e01b"; }
+.#{$ra-css-prefix}-pencil:before { content: "\e01c"; }
+.#{$ra-css-prefix}-trash-bin:before { content: "\e01d"; }
+.#{$ra-css-prefix}-facebook:before { content: "\e01f"; }
+.#{$ra-css-prefix}-twitter:before { content: "\e020"; }
+.#{$ra-css-prefix}-pinterest:before { content: "\e021"; }
+.#{$ra-css-prefix}-google-plus:before { content: "\e022"; }
+.#{$ra-css-prefix}-camera:before { content: "\e023"; }
+.#{$ra-css-prefix}-envelope:before { content: "\e024"; }
+.#{$ra-css-prefix}-star-o:before { content: "\e01e"; }
+.#{$ra-css-prefix}-star-half:before { content: "\e026"; }
+.#{$ra-css-prefix}-star:before { content: "\e027"; }
+.#{$ra-css-prefix}-calculator:before { content: "\e025"; }
+.#{$ra-css-prefix}-comments:before { content: "\e029"; }
+.#{$ra-css-prefix}-newspaper:before { content: "\e02a"; }
+.#{$ra-css-prefix}-street-view:before { content: "\e02b"; }
+.#{$ra-css-prefix}-angle-up:before { content: "\e028"; }
+.#{$ra-css-prefix}-angle-down:before { content: "\e02c"; }
+.#{$ra-css-prefix}-close:before { content: "\e02d"; }
+.#{$ra-css-prefix}-circle:before { content: "\e02e"; }
+.#{$ra-css-prefix}-sort-down:before { content: "\e02f"; }
+.#{$ra-css-prefix}-sort-up:before { content: "\e030"; }
+.#{$ra-css-prefix}-plus:before { content: "\e031"; }
+.#{$ra-css-prefix}-minus:before { content: "\e032"; }
+.#{$ra-css-prefix}-th-list:before { content: "\e033"; }
+.#{$ra-css-prefix}-angle-left:before { content: "\e034"; }
+.#{$ra-css-prefix}-angle-right:before { content: "\e035"; }
+.#{$ra-css-prefix}-circle-minus:before { content: "\e036"; }
+.#{$ra-css-prefix}-circle-plus:before { content: "\e037"; }
+.#{$ra-css-prefix}-check-mark:before { content: "\e038"; }
+.#{$ra-css-prefix}-filter:before { content: "\e039"; }
+.#{$ra-css-prefix}-draw:before { content: "\e03a"; }
+.#{$ra-css-prefix}-sold:before { content: "\e03b"; }
+.#{$ra-css-prefix}-forsale:before { content: "\e03d"; }
+.#{$ra-css-prefix}-paw:before { content: "\e03e"; }
+.#{$ra-css-prefix}-rent:before { content: "\e03f"; }
+.#{$ra-css-prefix}-notification-on:before { content: "\e03c"; }
+.#{$ra-css-prefix}-play-circle:before { content: "\e040"; }
+.#{$ra-css-prefix}-cancel-circled:before { content: "\e042"; }
+.#{$ra-css-prefix}-play-circle-o:before { content: "\e043"; }
+.#{$ra-css-prefix}-check-mark-circle-two:before { content: "\e044"; }
+.#{$ra-css-prefix}-sun-o:before { content: "\e045"; }
+.#{$ra-css-prefix}-car:before { content: "\e046"; }
+.#{$ra-css-prefix}-graduation-cap:before { content: "\e047"; }
+.#{$ra-css-prefix}-arrow-up:before { content: "\e048"; }
+.#{$ra-css-prefix}-crosshair:before { content: "\e041"; }
+.#{$ra-css-prefix}-facebook-square:before { content: "\e049"; }
+.#{$ra-css-prefix}-twitter-square:before { content: "\e04b"; }
+.#{$ra-css-prefix}-google-plus-square:before { content: "\e04c"; }
+.#{$ra-css-prefix}-pinterest-square:before { content: "\e04d"; }
+.#{$ra-css-prefix}-directions:before { content: "\e04a"; }
+
+// Icon Sizes
+// -------------------------
+
+/* makes the font 33% larger relative to the icon container */
+.#{$ra-css-prefix}-lg { font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.#{$ra-css-prefix}-2x { font-size: 2em; }
+.#{$ra-css-prefix}-3x { font-size: 3em; }
+.#{$ra-css-prefix}-4x { font-size: 4em; }
+.#{$ra-css-prefix}-5x { font-size: 5em; }
+
+// Stacked Icons
+// -------------------------
+.#{$ra-css-prefix}-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.#{$ra-css-prefix}-stack-1x,
+.#{$ra-css-prefix}-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.#{$ra-css-prefix}-stack-1x { line-height: inherit; }
+.#{$ra-css-prefix}-stack-2x { font-size: 2em; }

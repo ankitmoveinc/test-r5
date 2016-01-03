@@ -1,0 +1,174 @@
+//## Helpers CSS
+//## Anchor Link colors
+html, body {
+  font-weight: $font-weight-normal;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+ }
+.link-secondary {
+  a { color: $link-secondary-color; text-decoration: $link-hover-secondary-decoration; }
+  a:hover { color: $brand-primary;  text-decoration: $link-hover-secondary-decoration; }
+}
+.link-tertiary {
+  a { color: $link-tertiary-color; text-decoration: $link-hover-tertiary-decoration; }
+  a:hover { color: $brand-primary; text-decoration: $link-hover-tertiary-decoration; }
+}
+.link-quaternary {
+  a { color: $link-quaternary-color; text-decoration: $link-hover-quaternary-decoration; }
+  a:hover { color: $brand-primary;  text-decoration: $link-hover-quaternary-decoration; }
+}
+
+.no-show     { display: none; }
+.no-padding  { padding: 0; }
+.no-margin   { margin: 0;  }
+.display-block { display: block; }
+.pos-relative { position: relative; }
+
+.padding-all-sm   { padding: 5px; }
+.padding-all      { padding: 10px; }
+.padding-all-lg   { padding: 15px; }
+
+.padding-top-sm { padding-top: 5px; }
+.padding-top { padding-top: 10px; }
+
+.padding-right { padding-right: 10px;}
+.padding-right-sm { padding-right: 5px; }
+
+.padding-left    { padding-left: 10px; }
+.padding-left-sm { padding-left: 5px; }
+.padding-left-lg { padding-left: 15px; }
+
+.padding-bottom-sm { padding-bottom: 5px; }
+
+.margin-all-sm   { margin: 5px; }
+.margin-all      { margin: 10px; }
+.margin-all-lg   { margin: 15px; }
+
+.margin-top-sm     { margin-top: 5px; }
+.margin-top        { margin-top: 10px; }
+.margin-top-lg     { margin-top: 15px; }
+
+.margin-right       { margin-right: 10px;}
+
+.margin-bottom      { margin-bottom: 10px;}
+.margin-bottom-sm   { margin-bottom: 5px;}
+.margin-bottom-lg   { margin-bottom: 15px;}
+
+.margin-left      { margin-left: 10px;}
+.margin-left-sm   { margin-left: 5px;}
+.margin-left-lg   { margin-left: 15px; }
+
+.margin-right      { margin-right: 10px;}
+.margin-right-sm   { margin-right: 5px;}
+.margin-right-lg   { margin-right: 15px; }
+
+.align-top         { vertical-align: top; }
+
+//## Disabled a links
+a.disabled {
+  & , &:hover, &:focus, &:active {
+    color: $gray-light;
+    cursor: text;
+    text-decoration: none;
+    outline: 0;
+  }
+}
+.click-disabled {
+  pointer-events: none;
+}
+
+//## Algin
+.text-align-center { text-align: center;}
+.text-align-left { text-align: left;}
+.text-align-right { text-align: right;}
+
+//## Icons
+.icon-space-left-lg     { margin-left: 8px; }
+.icon-space-right-lg    { margin-right: 8px; }
+.icon-space-left        { margin-left: 5px; }
+.icon-space-right       { margin-right: 5px; }
+.icon-space-left-sm     { margin-left: 3px; }
+.icon-space-right-sm    { margin-right: 3px; }
+// Social icons
+.icon-facebook-bg     { color: $facebook-bg; }
+.icon-twitter-bg      { color: $twitter-bg;  }
+.icon-google-plus-bg  { color: $google-plus-bg; }
+.icon-pinterest-bg    { color: $pinterest-bg; }
+
+
+//## Float helpers
+.float-left { float:left; }
+.float-right { float:right;  }
+
+//## Photo centering helper classes
+.photo-wrapper-centered {
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin:0;
+    padding:0;
+    > ul {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    img {
+        display: inline
+    }
+}
+
+//## Background color classes
+.bg-default { background: $bg-default; }
+.bg-white { background: #fff; }
+
+//## Truncate
+.ellipsis {
+    display: block;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+//## Centering classes
+//Horizontal centering
+.horizontal-centering {
+  left: 50%;
+  @include translate(-50%,0);
+}
+.vertical-centering {
+  top: 50%;
+  @include translate(0,-50%);
+}
+.absolute-centering {
+  top:50%;
+  left: 50%;
+  @include translate(-50%,-50%);
+}
+
+//## Loading background class
+//## use this class if you are using with a img tag
+.loading-bkg {
+    background-color: #fff;
+    filter: alpha(opacity=10);
+	  opacity: 0.1;
+}
+
+//## Gets rid of chrome glow on links/buttons/labels
+a, button, a:focus, button:focus { outline: none; }
+
+//## Helper for disabling tel links on mobile when not needed
+.supress-event {
+  pointer-events: none;
+  a[href^="tel:"] {
+      color: $text-color;
+  }
+}
+
+//## Stretch-columns helpers
+ .stretch-columns { @include stretch-columns(middle); }
+ .stretch-columns-top { @include stretch-columns(top); }
+ .stretch-columns-bottom { @include stretch-columns(bottom); }

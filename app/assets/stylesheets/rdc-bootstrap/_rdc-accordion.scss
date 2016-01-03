@@ -1,0 +1,47 @@
+//  Custom Accordion
+.accordion {
+  .panel {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .accordion-heading {
+      background-color: $accordion-heading-bg;
+      cursor: pointer;
+      padding: 10px;
+      position: relative;
+  }
+  .accordion-title { margin: 0; }
+  .accordion-heading .accordion-title:after {
+      color: $gray;
+      content: "\e028";
+      float: right;
+      font-family: "rdcfont";
+      font-size: 22px;
+      line-height: 0.8;
+  }
+  .accordion-heading.collapsed .accordion-title:after { content: "\e02c"; }
+}
+
+// Addon class for .accordion
+// This accordion is commonly found on right rails
+.accordion-plain {
+  .panel {
+    margin: 0;
+    background-color: transparent;
+  }
+  .accordion-heading {
+      background-color: transparent;
+      padding: 15px 0;
+      border: none;
+      border-top: 2px solid $text-color;
+  }
+  .accordion-heading .accordion-title:after {
+      color: $text-color;
+      content: "\e036";
+      float: left;
+      margin-right: 5px;
+  }
+  .accordion-heading.collapsed .accordion-title:after {
+      content: "\e037";
+  }
+}

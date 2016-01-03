@@ -1,0 +1,149 @@
+// Labels
+// --------------------------------------------------
+
+
+//== Custom mixin for outlined labels
+// Remade label to add fake border in so outline and solid labels would align
+@mixin label-variant($color) {
+  background-color: $color;
+  border-color: $color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+@mixin label-outline-variant($outline-color) {
+  color: $outline-color;
+  border-color: $outline-color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: lighten($outline-color, 5%);
+    }
+  }
+}
+
+//== Labels styles
+.label {
+  border: 1px solid transparent;
+  // Add hover effects, but only for links
+  font-weight: normal;
+  a.label {
+    &:hover,
+    &:focus {
+      color: $label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+      //background-color: darken(inherit, 10%);
+    }
+  }
+  // created for labels with outline only
+  &.lable-outline {
+    background-color: transparent;
+    color: $label-color;
+
+  }
+  // align all icons inside labels to text
+  .ra {
+    line-height: 1.3;
+  }
+}
+
+//== Colors Variant SOLID
+// Contextual variations (linked labels get darker on :hover)
+
+.label-accent {
+  @include label-variant($label-accent-bg);
+}
+
+.label-red {
+  @include label-variant($label-red-bg);
+}
+
+.label-golden {
+  @include label-variant($label-golden-bg);
+}
+
+.label-green {
+  @include label-variant($label-green-bg);
+}
+
+.label-gray {
+  @include label-variant($label-gray-bg);
+}
+
+.label-gray-darker {
+  @include label-variant($label-gray-darker-bg);
+}
+
+.label-senior {
+  @include label-variant($label-senior-bg);
+}
+
+.label-dark-transparent {
+  @include label-variant($label-dark-transparent-bg);
+}
+
+.label-light-transparent-bg {
+  @include label-variant($label-light-transparent-bg);
+}
+
+//== Colors Variant OUTLINED
+.label-outline-red {
+  @include label-outline-variant($label-red-bg);
+}
+.label-outline-white {
+  @include label-outline-variant($label-red-white);
+}
+.label-outline-none {
+  border-color: transparent;
+}
+
+//== Custom RDC labels size
+.label-sm {
+  font-size: $font-size-xsmall;
+  padding: 0.05em 0.4em 0.05em;
+}
+.label-lg {
+  padding: 0.4em 0.8em 0.4em;
+  border-radius: $border-radius-base;
+  font-size: $font-size-small;
+}
+
+//== Brand label customization
+.label-openhouse {
+  @include label-variant($brand-green);
+  border-radius: 8px;
+}
+
+//== Label styles
+.label-corner {
+  border-radius: 0;
+}
+
+//== Label display
+.label-block {
+  display: block;
+}
+
+//== Label groups
+.label-group {
+  .label {
+    border-radius: 0;
+  }
+  .label:first-child {
+    border-top-left-radius: $border-radius-base;
+    border-bottom-left-radius: $border-radius-base;
+  }
+  .label:last-child {
+    border-top-right-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+  }
+  .label:not(:last-child) {
+    margin-right: -2px;
+  }
+}

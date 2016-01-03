@@ -1,0 +1,111 @@
+//== Custom RDC Typography
+//Header Styles
+h1, .h1, h2, .h2, h3, .h3{
+  margin-top: 0;
+}
+//Titles = Underline
+//Used mostly on content heavy pages (i.e. LDP)
+.title-section, [class^='title-subsection'] {
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $text-color;
+}
+.title-section {
+  font-size: 28px;
+  font-weight: $font-weight-normal;
+  border-bottom-width: 2px;
+  .title-section-tagline {
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    margin-left: 10px;
+  }
+}
+.title-subsection {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-semibold;
+}
+.title-subsection-sm {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  border-color: $gray-light;
+}
+//Headers = Not underline
+//Main header class
+.header-section {
+  font-size: 40px;
+  font-weight: $font-weight-normal;
+  margin: 20px 0;
+}
+//Used together with .header-sections
+.header-section-secondary {
+  font-size: 18px;
+  font-weight: $font-weight-normal;
+}
+//Used inside subsections
+.header-subsection {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+}
+// Header + Header Secondary together (spacing)
+.header-group {
+  margin: 20px 0;
+  .header-section {
+    margin: 0;
+  }
+  .header-section-secondary {
+    margin: 5px 0;
+    display: block;
+  }
+  &.header-group-white { color: #fff; }
+}
+//Titles or headers that are in sidebars
+.sidebar {
+  .title-section {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-semibold;
+    border-top: 2px solid #333;
+    border-bottom: none;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+    &.title-section-spacer {
+      margin-bottom: 10px;
+    }
+  }
+  // For aligning side bar first title-section to content title
+  .title-section-align {
+    margin-top: 62px;
+  }
+}
+//== General Typography Styles
+// Typography weight
+.font-normal    { font-weight: $font-weight-normal; }
+.font-semibold  { font-weight: $font-weight-semibold; }
+.font-bold      { font-weight: $font-weight-bold; }
+
+// Typography color
+.color-green        { color: $brand-green; }
+.color-gray         { color: $gray; }
+.color-gray-darker  { color: $gray-darker; }
+.color-base         { color: $text-color; }
+.color-red          { color: $brand-primary; }
+
+// Typography type
+.fine-print       { font-size: $font-size-small; }
+
+// Typography size - depreciated variables from Bootstrap default
+.font-size-large  { font-size: $font-size-large; }
+.font-size-base   { font-size: $font-size-base; }
+.font-size-small  { font-size: $font-size-small; }
+.font-size-xsmall { font-size: $font-size-xsmall; }
+
+//=================================//
+//==== Zero to Max of XX-Small ====//
+//=================================//
+@media only screen and (max-width : 480px) {
+  //Headers = Not underline
+  //Main header class
+  .header-section { font-size: 22px; }
+  //Used together with .header-sections
+  .header-section-secondary { font-size: 14px; }
+}

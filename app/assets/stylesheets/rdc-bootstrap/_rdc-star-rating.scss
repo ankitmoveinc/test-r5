@@ -1,0 +1,35 @@
+// For use in manual logic
+.star-rating {
+  padding: 0;
+  .ra-star {
+    color: $star-lit;
+    font-size: 18px;
+    letter-spacing: -4px;
+    &.rating-dim {
+      color: $star-dim;
+    }
+  }
+}
+
+// For star rating below only
+@mixin star-rating {
+  @for $i from 1 through 5 {
+    &.rating-#{$i} {
+      @for $j from 1 through $i {
+        .ra-star:nth-child(#{$j}) {
+          color: $star-lit;
+        }
+      }
+    }
+  }
+}
+
+// For use in class logic
+.star-rating {
+  &[class*="rating-"] {
+    .ra-star {
+      color: $star-dim;
+    }
+  }
+  @include star-rating();
+}

@@ -1,0 +1,188 @@
+// Helper method used for property meta data.
+.property-meta {
+  .data-value { font-weight: $font-weight-bold; }
+}
+
+// Listing Card Shared Style
+.listing-card, .listing-card-filled {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: $font-size-base;
+  cursor: pointer;
+  @include transition(all 400ms ease);
+  .listing-photo {
+    position: relative;
+    overflow: hidden;
+    .listing-photo-label {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      .label + .label { margin-left: -4px; }
+    }
+  }
+  .listing-info {
+    .listing-info-price {
+      font-weight: $font-weight-bold;
+      position: relative;
+      font-size: $font-size-large;
+      .ra { font-size: $font-size-base; }
+    }
+    .listing-card-tags {
+      display: inline;
+      position: absolute;
+      bottom: 3px;
+      margin-left: 5px;
+      .label-gray {
+        color: $gray-dark;
+        padding: .2em .6em .2em;
+        border-radius: 0;
+        font-size: $font-size-xsmall;
+      }
+    }
+  }
+  .listing-cta {
+    position: absolute;
+    .btn-default {
+      border-color: transparent;
+      display:inline;
+      .ra {
+        font-size: 24px;
+        &.ra-heart { color: $color-save;}
+      }
+    }
+  }
+}
+
+// Listing-Card default specific style
+// Used in Nearby listings, and new commm. floorplans
+.listing-card {
+  background-color: #fff;
+  border-radius: 2px;
+  height: 90px;
+  @include box-shadow(0px 1px 3px 0px rgba(0,0,0,0.25));
+  &:hover { @include box-shadow(0px 2px 6px 0px rgba(0,0,0,0.4));  }
+  .listing-photo {
+    float: left;
+    width: 115px;
+    height: 90px;
+    margin-right: 10px;
+    img {
+      height: 100%;
+    }
+  }
+  .listing-info {
+    padding: 10px 0;
+    margin-left: 115px;
+    .listing-info-address { font-weight: $font-weight-bold; }
+    .property-meta > li { margin-bottom: 1px; }
+  }
+  .listing-cta {
+    right: 0;
+    top: 1px;
+    .btn-default {
+      background-color: #fff;
+      .ra {color: $gray;}
+    }
+  }
+  .listing-sticker {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    .ra { font-size: $font-size-large; color: #fff;  }
+  }
+}
+
+// Listing-card-filled specific style
+// Used in Local
+.listing-card-filled {
+  background-color: $gray-tint;
+  @include perserve-aspect(4,3);
+  .listing-photo {
+    height: 100%;
+    width: 100%;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    img {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%,-50%);
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 60%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      @include gradient-vertical($start-color: rgba(0, 0, 0, 0), $end-color: rgba(0, 0, 0, 0.6));
+      pointer-events: none;
+    }
+  }
+  .listing-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 10px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+    pointer-events: none;
+    .property-meta {
+      > li { margin-bottom: 0; }
+      font-size: $font-size-small;
+    }
+    .listing-info-address { width: 90%; }
+    .listing-card-tags { text-shadow: none; }
+  }
+  .listing-cta {
+    right: 5px;
+    bottom: 4px;
+    .btn-default {
+      background-color: transparent;
+      .ra {
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+      }
+    }
+  }
+  .listing-sticker {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    .ra { font-size: $font-size-large; color: #fff; }
+  }
+}
+
+// Helper Addon for listing-card-filled
+// Shorter version (fixed height) used in MAL + Additional Listings
+.listing-card-filled.listing-card-short {
+  height: 150px;
+  &:before {
+    display: none;
+  }
+  .listing-photo img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+//More link styles
+.listing-card-more {
+  padding: 10px 0;
+  text-align: right;
+}
+
+// Showcase branding for listing-cards
+.listing-showcase {
+  .listing-card {
+    border-top: 3px solid $brand-showcase-border;
+  }
+}

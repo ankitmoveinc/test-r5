@@ -1,0 +1,88 @@
+/* Pagination custom variables */
+$pagination-size: 22px;
+
+/* Pagination wrapper */
+.pagination-wrapper {
+  height: $pagination-size + 2px;
+}
+
+/* Pagination custom styles */
+.pagination {
+  margin: 0;
+  font-size: $font-size-small;
+  /* main styles */
+  a, span.current {
+  	float: left;
+  	line-height: $pagination-size;
+    padding: 0 8px;
+    text-align: center;
+  	text-decoration: none;
+  	background-color: #fff;
+  	border: 1px solid $gray;
+  	margin-left: 3px;
+    color: $text-color;
+    border-radius: $border-radius-base;
+  }
+  a:hover {color: $brand-primary;}
+  span.current {
+    color: #fff;
+    background-color: $gray;
+  }
+  /* pagination addons */
+  span.gap, span.prev, span.next { float: left; }
+  span.gap { padding: 6px 3px 0; }
+  span.prev, span.next {
+    color: $gray-light;
+    line-height: $pagination-size;
+    padding: 0 3px;
+  }
+  span.prev a, span.next a {
+    color: $text-color;
+    background-color: transparent;
+  }
+  span.prev a, span.next a,
+  .first, .prev, .page, .next, .last {
+    padding: 0;
+    float: none;
+    border: none;
+  }
+}
+
+//=======================================//
+//==== Zero to Max X-Small (xxs, xs)=====//
+//=======================================//
+// Change from padding to pager at xs and below by adding ".pagination-xs-pager"
+@media only screen and (max-width : 766px) {
+  .pagination-wrapper.pagination-xs-pager {
+    text-align: center;
+    height: auto;
+    .pagination {
+      span.page {
+        display: none;
+      }
+      span.prev, span.next {
+        border: 1px solid $gray;
+        border-radius: $border-radius-base;
+      	text-align: center;
+      	vertical-align: middle;
+      	padding: 6px 12px;
+        span:before {
+          font-family: $font-family-base;
+          font-size: $font-size-base;
+          vertical-align: middle;
+        }
+      }
+      span.prev span:before {
+        content: "Prev";
+        margin-left: 5px;
+      }
+      span.next span:before {
+        content: "Next";
+        margin-right: 5px;
+      }
+      span.prev {
+        margin-right: 10px;
+      }
+    }
+  }
+}

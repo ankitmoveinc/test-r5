@@ -1,0 +1,21 @@
+//## RDC Icon sprites
+
+.icon-agent-rating {
+  background: url(asset-path("sprite-agent-ratings.svg")) no-repeat 0 0;
+  display: inline-block;
+  width: 80px;
+  height: 16px;
+  margin-left: -2px;
+
+  @mixin agent-rating {
+    /* 1-5 agent ratings */
+    @for $i from 0 through 5 {
+      &.agent-rating-#{$i} { background-position: 0 -#{32*$i}px; }
+    }
+    /* 0.5, 1.5, 2.5, 3.5, 4.5 agent ratings */
+    @for $i from 0 through 4 {
+      &.agent-rating-#{$i}-5 { background-position: 0 -#{16+(32*$i)}px; }
+    }
+  }
+  @include agent-rating;
+}

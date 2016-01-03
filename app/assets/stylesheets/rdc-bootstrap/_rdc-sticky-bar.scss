@@ -1,0 +1,61 @@
+//## LDP sticky bar
+.sticky-bar {
+  top: -100px;
+  transition: all 0.3s ease;
+  @include box-shadow(0px 1px 10px rgba(0,0,0,.2));
+  z-index: 1036;
+  .container {
+    padding: 0 11px;
+  }
+  &.scrolled {
+    top: 0;
+  }
+}
+.sticky-bar-content {
+  height: 65px;
+  padding: 10px 0;
+  background-color: #fff;
+  .btn-request-details {
+    padding: 7px 35px;
+  }
+}
+.sticky-anchor-nav {
+  height: 35px;
+  padding-top: 8px;
+  background-color: $gray-tint;
+  a { text-decoration: none;  }
+  ul {margin: 0;}
+  ul > li {
+    display: inline;
+    margin-right: 30px;
+  }
+  ul > li:last-child {margin-right: 0;}
+  li > a{
+    padding: 0 0 5px 0;
+    font-weight: $font-weight-semibold;
+    color: $link-secondary-color;
+  }
+  li.active a, li > a:hover {
+    padding: 0 0 4px 0;
+    border-bottom: 3px solid $gray-dark;
+    font-weight: $font-weight-semibold;
+    background-color: transparent;
+    color: $gray-dark;
+  }
+  li > a:focus {
+    background-color: transparent;
+  }
+}
+
+.sticky-bar .sticky-anchor-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  @include box-shadow(0px 1px 10px rgba(0,0,0,.2));
+  @include transition(all 500ms ease);
+  &.sticking {
+    @include translate(0,65px);
+  }
+}

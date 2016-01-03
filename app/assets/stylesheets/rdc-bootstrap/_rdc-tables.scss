@@ -1,0 +1,35 @@
+// Custom rdc tables
+//
+// Make all table heading normal font weight
+.table {
+  > thead > tr > th,
+  > thead > tr > td {
+    font-weight: $font-weight-semibold;
+    border-width: 1px;
+    padding-top:0; //Remove padding top on td,th so as to align with content
+  }
+}
+// Table without lines (only table header has line)
+.table-clear {
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    border-color: transparent;
+  }
+  > thead > tr > th,
+  > thead > tr > td {
+    font-weight: $font-weight-semibold;
+  }
+  &.table-heading-unstyled {
+    > thead > tr > th {
+      border-color: transparent;
+    }
+  }
+}
+// Table without header - to remove the border on top of first row
+.table-noheader {
+  > tbody > tr:first-child > td {
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,28 @@
+// Custom buttons colors
+// --------------------------------------------------
+.btn-default:hover { background-color: $btn-default-hover-bg; border-color: $btn-default-hover-border; }
+.btn-primary:hover { background-color: $btn-primary-hover-bg; border-color: $btn-primary-hover-border; }
+
+.btn-clear {
+  @include button-variant($btn-default-color, transparent, $btn-default-border);
+  &:hover { background-color: $btn-default-hover-bg; }
+}
+
+// Special request button for photo gallery
+.btn-gray {
+  @include button-variant($btn-primary-color, #2b2b2b, transparent);
+}
+
+//## Button disclaimer text
+.btn-text-disclaimer {
+  font-size: $font-size-small;
+  margin-top: 5px;
+  margin: 0;
+}
+
+//## Make all icons inside default button use #222 except save
+.btn-default {
+  .ra:not(.ra-heart-o):not(.ra-heart) {
+    color: $gray-darker;
+  }
+}

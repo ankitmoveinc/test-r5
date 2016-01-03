@@ -1,0 +1,137 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// XX-Small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xxs);
+
+// Fix bug where sass was not making xxs column styles
+@mixin col-xxs-list {
+  @for $i from 1 through 12 - 1 {
+  .col-xxs-#{$i} {
+    position: relative;
+    min-height: 1px;
+    padding-left:  10px;
+    padding-right: 10px;
+   }
+  }
+}
+@include col-xxs-list;
+
+
+// X-Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-xs-min) {
+  @include make-grid(xs);
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+// Custom gutter layouts
+.row.gutter-none {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.row.gutter-sm {
+  margin-right: -5px;
+  margin-left: -5px;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+.row.gutter-xs {
+  margin-right: -2px;
+  margin-left: -2px;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}

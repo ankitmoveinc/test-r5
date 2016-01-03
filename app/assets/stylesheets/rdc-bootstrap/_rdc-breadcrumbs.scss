@@ -1,0 +1,27 @@
+.breadcrumb-list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: $font-size-small;
+  ul {
+    display: inline-block;
+    vertical-align: top;
+    li:after {
+      content: "\e035";
+      font-family: "rdcfont";
+      padding-left: 5px;
+      color: $gray-light;
+      vertical-align: middle;
+    }
+    li:last-child:after {
+      visibility: hidden;
+    }
+    a {
+      vertical-align: top;
+      color: $gray;
+      &:hover, &:focus, &:active {
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}

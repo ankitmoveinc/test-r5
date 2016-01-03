@@ -1,0 +1,33 @@
+//## RDC Bootstrap framework specific Mixins
+
+// Stretch Columns use for columns with table qalities
+// columns will auto fit contents and stretch to fit container
+@mixin stretch-columns ($valign: middle) {
+  display:table;
+  width: 100%;
+  > div {
+    display: table-cell;
+    @if $valign {
+      vertical-align: $valign;
+    }
+  }
+}
+
+// Wrappers that will maintain apsect ratio
+// Note: Must have .aspect-content inside the wrapper to house all content
+@mixin perserve-aspect($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .aspect-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

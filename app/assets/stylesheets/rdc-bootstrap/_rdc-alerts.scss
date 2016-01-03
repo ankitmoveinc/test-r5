@@ -1,0 +1,66 @@
+//## Alert styles
+
+// General Alert
+.alert {
+  padding-top: 10px; // bootstrap 15px
+  padding-left: 10px; // bootstrap 15px
+  padding-bottom: 10px; // bootstrap 15px
+  margin-bottom: 10px; // bootstrap 20px
+  &.alert-dismissible .close {
+    text-shadow: none;
+    top: 0; // bootstrap -2px
+    opacity: 1; // bootstrap 0.2
+    &:hover, &:focus {
+      color: inherit; // bootstrap #000
+    }
+  }
+}
+
+// Alert Custom Sizes
+.alert-sm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: $font-size-small;
+    margin-bottom: 0;
+}
+
+// Alert Custom Styles
+.alert-corner {
+  border-radius: 0;
+}
+
+.alert-notify {
+  width: 300px;
+  &[class^="alert-fixed"], &[class*="alert-fixed"] {
+    position: fixed;
+    z-index: 9999;
+    margin: 0;
+  }
+  &.alert-fixed-bottom-right {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+// Alert Custom Color
+.alert.alert-dark {
+  background-color: $gray-dark;
+  border-color: $gray-dark;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: underline;
+    &:hover { color: $gray; }
+  }
+}
+
+//## Mobile fullscreen modal - Zero to Max X-Small (xxs, xs)
+// note: modals that become full screen at smaller sizes
+@media only screen and (max-width : 766px) {
+  .alert-notify {
+    &.alert-fixed-bottom-right {
+      right: ($grid-gutter-width / 2);
+      bottom: ($grid-gutter-width / 2);
+    }
+  }
+}
