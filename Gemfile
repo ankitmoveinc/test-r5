@@ -23,6 +23,8 @@ gem 'puma'
 
 gem 'passenger'
 gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

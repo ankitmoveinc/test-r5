@@ -14,6 +14,9 @@ set :ruby_version, '2.3.0'
 set :user, 'railssvc'
 set :rvm_type, :system
 set :rvm_ruby_version, "#{fetch(:ruby_version)}@#{fetch(:application)}"
+set :passenger_pid_file, "--pid-file #{fetch(:deploy_to)}/shared/pids/passenger.pid"
+set :passenger_log_file, "--log-file #{fetch(:deploy_to)}/shared/logs/passenger.log"
+#set :passenger_restart_command, 'passenger-config restart-app'
 # set :ssh_options, {
 #   forward_agent: true,
 #   user: fetch(:user),
@@ -59,10 +62,10 @@ namespace :deploy do
   desc "Hard reset passenger"
   task :hard_reset do
     on roles(:all) do
-      execute "sudo /etc/init.d/passenger stop || true && sudo /etc/init.d/passenger start"
+      #   execute "/etc/init.d/passenger stop || true && /etc/init.d/passenger start"
     end
   end
 
-  after :published, :run_bundle_install
-  after :finished, :hard_reset, :clear_cache
+  #after :published, :run_bundle_install
+  after :finished, :'passenger:restart' #:hard_reset, :clear_cache
 end
