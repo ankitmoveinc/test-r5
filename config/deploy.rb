@@ -3,9 +3,10 @@ lock '3.4.0'
 
 set :application, 'seller_leads'
 set :repo_url, 'git@github.com:ankitmoveinc/test-r5.git'
-set :deploy_to, '/opt/railssvc/rdc-next'
+#set :deploy_to, '/opt/railssvc/rdc-next'
+set :deploy_to, '/opt/user/hackathon'
 set :ruby_version, '2.3.0'
-set :user, 'railssvc'
+set :user, 'hackathon'
 set :rvm_type, :system
 set :rvm_ruby_version, "#{fetch(:ruby_version)}@#{fetch(:application)}"
 set :passenger_pid_file, "--pid-file #{fetch(:deploy_to)}/shared/pids/passenger.pid"
