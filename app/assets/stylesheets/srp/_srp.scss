@@ -1,0 +1,323 @@
+//## SRP layout styles
+.container-srp {
+  padding-bottom: 30px;
+  background-color: $bg-srp-page;
+  .srp-card-wrapper {
+    margin-top: 15px;
+  }
+}
+
+//== SRP controls
+.srp-controls {
+  position: relative;
+  //height: 35px;
+  @include clearfix;
+}
+.srp-list-header-count {
+  vertical-align: top;
+}
+.srp-sort-count-wrap {
+  padding: 6px 0;
+  display: inline-block;
+}
+.srp-sorting-control {
+  display: inline-block;
+  label {margin: 0;}
+}
+.srp-view-toggle {
+  float: right;
+  a, a.active, a:hover, a:focus {
+    color: $text-color;
+  }
+}
+// customSelect.js sorting customization
+.srp-sorting-input {
+  select {
+    width: 230px !important;
+  }
+}
+.srp-customselect-input {
+  select + span { color: $brand-primary; }
+}
+//== SRP header
+.srp-list-header h1 {
+  margin-bottom: 5px;
+  font-size: $font-size-large;
+  line-height: 1.1em;
+  font-weight: $font-weight-normal;
+}
+//== SRP: Header for New Home Communities */
+.srp-link-newhomes {
+  margin-bottom: 5px;
+  font-size: $font-size-small;
+}
+//== SRP breadcrumbs
+.srp-breadcrumbs {
+  .breadcrumb-list {
+    padding-top: 0;
+  }
+}
+//== SRP List
+.srp-list {
+  position: relative;
+}
+.srp-pagination-top {
+  position: absolute;
+  top: -77px;
+  right: 0;
+}
+.srp-pagination-bottom {
+  margin: 10px 0;
+  float: right;
+}
+
+//## Loading background image used for infinite scroll
+.loading-graphic {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(asset-path("loading-spinner-md.gif")) 50% 50% no-repeat;
+    margin: 0 auto;
+}
+//== SRP item layout
+.srp-item {
+  position: relative;
+  margin-bottom: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  @include box-shadow(0px 1px 3px 0px rgba(0,0,0,0.25));
+  @include transition(all 50ms ease);
+  &:hover { @include box-shadow(0px 2px 8px 0px rgba(0,0,0,0.4));  }
+  border-radius: 2px;
+  @include clearfix;
+  .srp-item-photo {
+    float: left;
+    width: 225px;
+    height: 169px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    img { max-height: 100%; max-width: 100%; }
+  }
+  .srp-item-body {
+    padding: 6px 12px;
+    margin-left: 225px;
+  }
+  .srp-item-action {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    .btn-save-listing {
+      font-size: 24px;
+      padding: 10px 14px;
+      color: $gray;
+      &:hover { text-decoration: none; }
+      .ra-heart { color: $color-save; }
+    }
+  }
+  .srp-item-ldp-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding:9px 12px;
+  }
+}
+
+//== SRP item photo
+.srp-item-photo {
+  overflow: hidden;
+  background: #f7f7f7;
+  position: relative;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .srp-item-photo-label {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    .label { display: inline-block; border: none; padding: 0.5em 0.8em 0.5em;  }
+    .label + .label { margin-left: -4px; }
+    .label span { line-height: 1; }
+  }
+  .srp-item-photo-count{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .srp-item-multi-count {
+    display: none; //only show in map sm with mutli-count
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+//== SRP item body (content)
+.srp-item-body {
+  .srp-item-address a {
+    font-weight: 400;
+    color: $gray-dark;
+    text-decoration: none;
+    .listing-community { display: block; }
+    .listing-community ~ span { font-weight: $font-weight-normal; }
+  }
+  .srp-item-neighborhood {
+    font-size: $font-size-small;
+    line-height: 1.1em;
+    a + a:before {
+      color: $gray-dark;
+      content: "\e035";
+      font-family: "rdcfont";
+      font-size: $font-size-base;
+      line-height: 0.8;
+      vertical-align: middle;
+    }
+  }
+  .srp-item-price {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    margin-top: 3px;
+    .srp-item-price-reduce {
+      font-size: 80%;
+      i { vertical-align: bottom; }
+      .data-value { font-weight: $font-weight-normal; }
+    }
+    .srp-item-price-na { font-weight: $font-weight-normal; }
+    .srp-item-price-helper {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base;
+    }
+  }
+  .srp-item-type {
+    font-size: $font-size-small;
+  }
+  .srp-item-tags {
+    // line-height: 1em;
+    .label-gray {
+      color: $gray-dark;
+      padding: .2em .6em .2em;
+      border-radius: 0;
+      font-weight: $font-weight-normal;
+    }
+  }
+  // broker info for lg md sm list view
+  .srp-item-broker-wrap {
+    font-size: $font-size-small;
+    display: table;
+    position: absolute;
+    bottom: 6px;
+    > div { display: table-cell; vertical-align: middle; }
+    .srp-item-signrider {
+      .srp-broker-logo {
+        max-width: 75px;
+        max-height: 50px;
+        margin-right: 10px;
+      }
+    }
+    .srp-item-broker-text {
+      p { margin-bottom: 0; }
+      span:first-child { display: block; }
+      line-height: 1.3em;
+    }
+  }
+  // broker info for xs xxs list view + all size map view
+  .srp-item-broker {
+    display: none;
+    width: 95%;
+    font-size: $font-size-small;
+  }
+  .srp-item-offers {
+    position: absolute;
+    font-size: 12px;
+    right: 0;
+    bottom: 0;
+    padding: 8px 12px;
+  }
+}
+//== SRP showcase
+.srp-item.listing-showcase {
+  border-top: 3px solid $brand-showcase-border;
+}
+//== SRP Featured Rentals
+.srp-item.listing-featured{
+  border-top: 3px solid $brand-featured-rental;
+}
+
+//== SRP Home affordability Siderail
+.hm-affordability-siderail {
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+    max-width: 312px;
+    height: auto;
+    border: 0;
+  }
+}
+
+//== SRP Footer (count, pagination, etc.)
+.srp-list-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid $text-color;
+  clear: both;
+}
+.srp-display-count-wrap {
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+}
+
+//== SRP No properties found error page
+.srp-no-prop-error {
+  h2 {
+    border-bottom: 1px solid $text-color;
+    padding: 10px 0;
+  }
+  h3 {
+    margin-top: 30px;
+  }
+}
+
+//== SRP - Multiple listings
+.srp-list .srp-multi-headline {
+  margin-bottom: 5px;
+  .srp-multi-links {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+.srp-list .srp-multi-wrapper {
+  .srp-item {border-radius: 0;}
+  .srp-item:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  .srp-item:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .srp-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+//## SECTION: SRP Sponsor Attribution (e.g. Apartments.com)
+.srp-sponsor-attribution {
+  margin-bottom: 20px;
+  font-size: $font-size-small;
+  span { margin-right: 2px; }
+  img {
+    display: inline-block;
+    height: 20px;
+    vertical-align: top;
+  }
+}
+.srp-item-sponsor {
+  img {
+    display: inline-block;
+    height: 16px;
+    vertical-align: top;
+    margin-top: -1px;
+    margin-left: 2px;
+  }
+}
