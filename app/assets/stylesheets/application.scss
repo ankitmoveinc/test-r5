@@ -10,10 +10,12 @@
 // Core RDC Boostrap Framework
 @import "rdc-bootstrap";
 
+// SRP Styles
+@import "srp";
+
 // Global Navigation Components included in app.css until migrated to a standalone application
 // Global Header & Footer Styles (non-framework)
 @import "global-nav/svg-sprites";
 @import "global-nav/navigation-header";
 @import "global-nav/navigation-footer";
-@import "global-nav/navigation-modal"; // Pending removal
-
+@import "global-nav/navigation-modal";
